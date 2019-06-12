@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar"></include>
+
+    <Button
+        android:id="@+id/milktea"
+        android:layout_width="139dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/toolbar"
+        android:layout_alignLeft="@+id/toolbar"
+        android:layout_alignTop="@+id/toolbar"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_toStartOf="@+id/macchiato"
+        android:layout_toLeftOf="@+id/macchiato"
+        android:background="@color/colorPrimary"
+        android:onClick="milktea"
+        android:text="Milk Tea" />
+
+    <Button
+        android:id="@+id/macchiato"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignEnd="@+id/toolbar"
+        android:layout_alignRight="@+id/toolbar"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="135dp"
+        android:background="@color/colorPrimary"
+        android:onClick="macchiato"
+        android:text="Signature Macchiato " />
+
+
+    <Button
+        android:id="@+id/flavouredtea"
+        android:layout_width="134dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/toolbar"
+        android:layout_alignRight="@+id/toolbar"
+        android:layout_marginTop="56dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginRight="1dp"
+        android:background="@color/colorPrimary"
+        android:onClick="flavouredtea"
+        android:text="Flavoured Tea"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+
+    <ViewFlipper
+        android:id="@+id/v_flipper"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="27dp"
+        android:layout_marginLeft="27dp"
+        android:layout_marginTop="139dp">
+
+    </ViewFlipper>
+
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/v_flipper"
+        android:layout_alignEnd="@+id/flavouredtea"
+        android:layout_alignRight="@+id/flavouredtea"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="-12dp"
+        android:layout_marginRight="-12dp"
+        android:text="Popular Drinks"
+        android:textAllCaps="true"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="150dp"
+        android:layout_height="274dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/v_flipper"
+        android:layout_alignLeft="@+id/v_flipper"
+        android:layout_marginStart="0dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="1dp"
+        app:srcCompat="@drawable/goldenbubble_milktea" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="150dp"
+        android:layout_height="315dp"
+        android:layout_below="@+id/textView"
+        android:layout_alignStart="@+id/v_flipper"
+        android:layout_alignLeft="@+id/v_flipper"
+        android:layout_marginStart="158dp"
+        android:layout_marginLeft="158dp"
+        android:layout_marginTop="-18dp"
+        app:srcCompat="@drawable/grassjelly_milktea" />
+
+</RelativeLayout>

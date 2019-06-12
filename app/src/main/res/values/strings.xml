@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Koi</string>
+    <string name="firebase_login">Firebase Login</string>
+</resources>
